@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>アドオンのススメ</title>
+		<meta name="description" content="アドオンのススメ">
+		<!--styles-->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/button.css">
+		<link rel="stylesheet" href="./styles/side.css">
+		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+		<!--scripts-->
+		<script src="./scripts/script.js"></script>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="./image/icon/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+			<div class="header">
+					<div id="nav-drawer"><input id="nav-input" type="checkbox" class="nav-unshown"><label id="nav-open" for="nav-input"><span></span></label><label class="nav-unshown" id="nav-close" for="nav-input"></label>
+							<div id="nav-content">
+									<h3 class="title"><span class="mgr-10">webアプリ群</span></h3>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/tools/mine/index.html" class="ri-2" >マイクラのやつ</a></span></p>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/tools/system/index.html" class="ri-2" >便利そうなやつ</a></span></p>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/addon/index.html" class="ri-2" >アドオンのススメ</a></span></p>
+									<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
+									<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
+									<p class="h"><span class="mgr-10">アイコン</span><br><span class="mgr-10"><a href="https://fontawesome.com/?from=io" target="_blank" class="ri">FontAwesome</a></span></p>
+									<h3><span class="mgr-10"><a href="https://twitter.com/H2DH4K?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">フォローする By H2DH4K</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span></p>
+							</div>
+					</div>
+					<div class="header-log">アドオンのススメ</div>
+					<div id="hedaer-list">
+							<ul>
+									<li><a class="ri-3" href="https://shah-two.vercel.app/">ホーム</a></li>
+									<li><a class="ri-3" href="https://twitter.com/H2DH4K">開発者</a></li><a>使ってくれてありがとう！</a></ul>
+					</div>
+			</div>
+	</header>
+		<!--本文-->
+		<div class="mine">
+				<div>
+					<img src="./image/icon/icon2.png" class="image">
+					<h1 class="title"><span class="mgr-10">UIを使ってみよう！</span></h1>
+					<p>こんにちはシューです
+					<br>今回はuiについて書いていこうと思います
+					<br>uiは使えるようになると面白いので今回はuiを理解する第一歩として書いていきます
+					<br>あとは自分で試行錯誤してみてください
+					</p>
+					<h2 class="h">uiってどこで使われてるの？</h2>
+					<p>そもそもuiとはなんだという疑問も浮かぶと思います
+					<br>uiは表示関係になるのでリソースパックで作ります
+					<br>例えばホットバーありますよね
+					<br>あれはuiで管理されているので上に持って行ったりもできますし消し去ってしまったりもできます
+					<br>インベントリもそうですしチェストや作業台、村人の交易なんかもuiだったと思います
+					<br>実際にuiでできることの動画を用意したので見てみてください
+					<br><video src="vdo/ui.mp4" controls width="960" height="530"></video>
+					</p>
+					<h2 class="h">実際に作ってみよう！</h2>
+					<p>今回はsampleを三つ用意しました
+					<br>一つはテキスト、一つは画像、一つはボタンです
+					<br>一つ注意なのはボタンはタッチ操作ができない端末では使えないので注意です
+					<br>ファイル構成は以下ほどに
+					</p>
+					<div class="file">
+						<ul>
+						  <li><i class="fas fa-folder"></i><a class="mgr-10">リソースパック</a>
+							<ul>
+							  <li><i class="fas fa-folder"></i><a class="mgr-10">ui</a>
+								<ul>
+								  <li><i class="fas fa-file-alt"></i><a class="mgr-10">hud_screen.json</a></li>
+								</ul>
+							　</li>
+							  	<li><i class="fas fa-file-alt"></i><a class="mgr-10">manifest.json</a></li>
+							</ul>
+						  </li>
+						</ul>
+					</div>
+					<p>例によってmanifestの中身は省略します<a class="mini">pack_typeはresourcesです</a>
+					<br>中身をばーんとやってもいいんですけど何せデフォルトの状態でも2200行近くありますからね
+					<br>デバックはしてないのでもしかしたら重なったりしてるかもしれないので自分で位置を移動したりしてください
+					<br>解説するとなると大変なので必要なものだけ見ていきましょう
+					<br><br>まずはデフォルトのパックを入手してください<span class="mini">入手方法は私の過去記事を見るか自分で調べてください（改めて記事を今後書く予定です）</span>
+					<br>解凍してui/hud_screen.jsonを開きましょう
+					<br>なかには「うわぁ...」と声を上げる人もいますが、難しくないのでこのまま行きましょう
+					<br>一個一個解説するわけにもいかないので今回は詳しい内容は無視します
+					<br>では一番下にスクロールします
+					<br>すると<span class="green">"hud_content"</span>という要素があるのがわかりますよね
+					<br>ここをいじっていきます。あらかじめ自分でファイルを作っておきましょう
+					<br><br>ここから書いていくわけなんですが、jsonの構造について知っておくと進めやすいのでよくわからない人はjsonについて調べてみてください
+					<br><span class="green">"hud_content"</span>の<span class="orange">"controls"</span>に要素を追加してその下で管理するみたいな感じで追加します
+					<br><script src="https://gist.github.com/texture08/22a55039b2efe9b2b79ba9ffc2e19b1b.js"></script>
+					<br>上のようなコードがあると思います
+					<br>"camera_renderer@camera_renderer"の終わりの}につなげるように,を増やして<span class="green">{ "txt@hud.txt": {} }</span>を追加してください
+					<br>同じように<span class="green">{ "img@hud.img": {} }</span><span class="green">{ "btn@hud.btn": {} }</span>を追加しましょう
+					<br><script src="https://gist.github.com/texture08/24649940bac6c58cdd999194dc25632b.js"></script>
+					<br>一度{ "A@hud.B": {} }として考えましょう
+					<br>基本的にAとBには同じ物を入れるようにするといいです
+					<br>でないとあとあとこんがらがってしまいます
+					<br>ではまずテキストから表示させて行きましょう
+					<br><span class="green">"hud_content"</span>の}に,を付けて以下の構文をつけ足してください<span class="mini">わかりやすいように"hud_content"も一緒に載せておきます</span>
+					<br><script src="https://gist.github.com/texture08/2d3deea26c0e8092b2f0abd6ba16f178.js"></script>
+					<br>マイクラを起動して適用してみるとテキストが現れていることがわかると思います
+					<br>上から解説していきます
+					<h5>・anchor_to、anchor_from</h5>
+					どこに寄せるかを指定します
+					<br>top_rightやらbottom_rightなどがある
+					<br>実際にいじって確かめてみてください
+					<h5>・size</h5>
+					聞いてその通りサイズです
+					<br>%とかにすると画面に対して何パーセントで表示するなどの設定ができたと思います
+					<h5>・text</h5>
+					そこに入れる文字です
+					<br>日本語でも英数字でも行けますし、半角英数字にするとlangファイルで指定することもできたと思います
+					<br>多言語化する場合はlang指定が使えますね
+					<h5>・color</h5>
+					色です
+					<br>0.0から1.0の間でRGBが取れます
+					<br>シェーダーとかglslとかやってる人なら馴染みがあると思います
+					<h5>・layer</h5>
+					レイヤーです
+					<h5>・shadow</h5>
+					影をつけるか否か
+					<br><br>テキストを表示する場合は大体このような手順で表示することができます
+					<br>では画像を表示します
+					<br>先ほどと同じような手順で以下のコードをつけ足してください
+					<br><script src="https://gist.github.com/texture08/28b408fd05e5e6b0f8ec3be34fe76dbc.js"></script>
+					<br>これも上から解説します
+					<h5>・texture</h5>
+					画像のファイルパス
+					<br>今回ならパックアイコンが設定されている
+					<h5>・offset</h5>
+					どの位置に表示するか
+					<br>テキストでも使える
+					<br><br>テキストで使ったものも画像で使えるものがあると思うので必要なものはコピペしましょう
+					<br>最後はボタンです
+					<br>これは少し特殊なので注意しましょう
+					<br><script src="https://gist.github.com/texture08/fa955c0a8fcacad8e40b206b9c8b8ee4.js"></script>
+					<br>ボタンを追加するときはA<span class="mini">先ほど例にしたもの</span>の後にも文字がついています
+					<br>ボタンなら追加しておきましょう
+					<h5>・ignored</h5>
+					よくわかっていません
+					<h5>・$pressed_button_name</h5>
+					ボタンを押したときに実行する動作
+					<br>この場合はボタンを押すとホットバーのカーソルが左に動くやつです
+					<br>自分でつくることはできず、もやんが用意したものしか使えません
+					<h5>・button_text</h5>
+					ボタンにテキストを追加できます
+					<br>例によってlangで指定もできます
+					<br><br>以上、uiを理解するための第一歩でした
+					</p>
+					<h2 class="h">終わりに</h2>
+					<p>いかがでしたか？
+					<br>uiを読み進めていく助けになったらうれしいなと思います
+					<br>uiができると面白いこともできたりするのでぜひやってみてください
+					<br>もしsampleが欲しければTwitterのDMで言ってくれればあげます
+					</p>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.com/H2DH4K" target="_blank" class="ri">Twitter</a> ID:H2DH4K<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>
