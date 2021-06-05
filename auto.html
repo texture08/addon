@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>アドオンのススメ</title>
+		<meta name="description" content="アドオンのススメ">
+		<!--styles-->
+		<link rel="stylesheet" href="./styles/style.css">
+		<link rel="stylesheet" href="./styles/button.css">
+		<link rel="stylesheet" href="./styles/side.css">
+		<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+		<!--scripts-->
+		<script src="./scripts/script.js"></script>
+		<!--アイコン-->
+		<link rel="icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="./image/icon/favicon.png">
+		<link rel="apple-touch-icon" href="./image/icon/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+			<div class="header">
+					<div id="nav-drawer"><input id="nav-input" type="checkbox" class="nav-unshown"><label id="nav-open" for="nav-input"><span></span></label><label class="nav-unshown" id="nav-close" for="nav-input"></label>
+							<div id="nav-content">
+									<h3 class="title"><span class="mgr-10">webアプリ群</span></h3>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/tools/mine/index.html" class="ri-2" >マイクラのやつ</a></span></p>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/tools/system/index.html" class="ri-2" >便利そうなやつ</a></span></p>
+									<p class="h"><span class="mgr-10"><a href="https://shah-two.vercel.app/addon/index.html" class="ri-2" >アドオンのススメ</a></span></p>
+									<h3 class="title"><span class="mgr-10">お借りした素材など</span></h3>
+									<p class="h"><span class="mgr-10">使用フォント</span><br><span class="mgr-10"><a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" class="ri">けいふぉんと</a></span></p>
+									<p class="h"><span class="mgr-10">アイコン</span><br><span class="mgr-10"><a href="https://fontawesome.com/?from=io" target="_blank" class="ri">FontAwesome</a></span></p>
+									<h3><span class="mgr-10"><a href="https://twitter.com/H2DH4K?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">フォローする By H2DH4K</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span></p>
+							</div>
+					</div>
+					<div class="header-log">アドオンのススメ</div>
+					<div id="hedaer-list">
+							<ul>
+									<li><a class="ri-3" href="https://shah-two.vercel.app/">ホーム</a></li>
+									<li><a class="ri-3" href="https://twitter.com/H2DH4K">開発者</a></li><a>使ってくれてありがとう！</a></ul>
+					</div>
+			</div>
+	</header>
+		<!--本文-->
+		<div class="mine">
+				<div>
+					<img src="./image/icon/js_for.png" class="image">
+					<h1 class="title"><span class="mgr-10">めんどくさい作業も自動化！for文をマスターしよう！</span></h1>
+					<p>こんにちはシューです
+					<br>今回はアドオンに直接関係はしていないですが、知っておくと便利なので記事を作ります
+					<br>「ここの部分の数値を1ずつ変えてコピペするのめんどくさいな...」みたいなとき、ありますよね
+					<br>そんなことを解決する方法を今回は解説します
+					<br>ただしこれは少しハードルが高いのでわからないところは積極的に調べてください
+					</p>
+					<h2 class="h">どうやってやるの？</h2>
+					<p>自動生成をするにはjsonとは別のプログラミング言語を使用します
+					<br>例えば<a class="orange">JavaScript</a>や<a class="orange">python</a>などが有名で簡単です
+					<br>今回は<a class="green">JavaScript</a>を使っていきたいと思います
+					<br>Javascriptのfor文というものを使うことで先ほどの「数値を1ずつ変えてコピペ」の作業が0になります
+					<br>少し語弊があるかもしれませんが、コピペの数は断然減ります
+					<br>今回は<a class="orange">for文</a>の解説と環境構成を説明します。JavaScript自体の詳しい解説はしないので自分で調べてみてください
+					<br><br>では使うものを紹介していきます
+					<br>前提としてwindows 10で実行をしていきます。もっと深くなるとスマホで実行もできます
+					<br>必要なものはnode.js（サーバーソフト）、javascriptの前提知識だけでできます
+					<br>一応web常でも実行できますが、おすすめはしないです。これに関してはあとで解説します
+					</p>
+					<h2 class="h">実際に作ってみよう！</h2>
+					<p>では環境を構築する前に説明と簡単な動作を見ていきましょう
+					<br>ここではまず最初にchromeブラウザで実行していきます
+					<br>まず準備としてこの記事を開いてるタブでも新しいタブでもいいですが、キーボードの<a class="green">F12</a>を押してください
+					<br><a class="orange">デベロッパツール</a>といって、基本的にデバッグをするために使ったりします
+					<br>そこの<a class="green">console</a>というタブを開いて下のような画面になったら準備okです
+					<br><img src="./image/console.png" class="image">
+					<br>このconsoleで最初にデバッグをしていきます
+					<br>以下がコードです
+					<div class="image"><script src="https://gist.github.com/texture08/9879b71928dc24c7386fcc9a93cb7e87.js"></script></div>
+					<br>これをコピーしてconsoleに張り付けてエンターをおしてみてください
+					<br>すると下の画像のようにtest1からtest10まであると思います
+					<br><img src="./image/console2.png" class="image">
+					<br>こんな感じで生成してくれます
+					<br>これを一括選択して張り付ければいいんですがコピーしてみると...
+					<br><code><a class="orange">
+						test1
+						VM37:7 test2
+						VM37:7 test3
+						VM37:7 test4
+						VM37:7 test5
+						VM37:7 test6
+						VM37:7 test7
+						VM37:7 test8
+						VM37:7 test9
+						VM37:7 test10</a></code>
+					<br>このようになってしまいます
+					<br>これだと不便なので上で言った「一応web常でも実行できますが、おすすめはしないです。これに関してはあとで解説します」の理由になります
+					<br>なのであとで解説するnode.jsを使って実行します
+					<br>そんなの気にしないぜ！って人はnode.jsを使わなくても大丈夫ですが、node.jsはとっても便利なので入れておいて損はないと思います
+					<br><br>では上から順番に解説していきます
+					<br><br>・<a class="green">let mini = 0;//開始する数 基本0でok</a>
+					<br>これはforを回すときの最初の値になります。特殊なことをしない限りは0で大丈夫です
+					<br><br>・<a class="green">let max = 10;//生成する回数</a>
+					<br>生成する数です
+					<br>max - miniの差の数の分生成するのでこの場合は10回分生成します
+					<br><br>・<a class="green">let str = 0;//生成する最初の数-1</a>
+					<br>これは生成するときに使う実際に足されていく数になります
+					<br>この場合は1から開始します。値を変えて実行してみるとわかると思います
+					<br><br>・<a class="green">for (let i = mini; i < max; i++) {で始まって}で終わるやつ</a>
+					<br>これが今回解説するfor文の本体です
+					<br>iにminiを代入してiがmaxと同じになるまで処理を繰り返しし、i++でiに値を1ずつ増やしていく...
+					<br>といった感じでしょうか？簡単に言えばminiがmaxと同じになるまで処理を続けるというものになります
+					<br>{}の中は実際に実行する処理です
+					<br>基本的にjavascriptは一回しか処理を実行しませんが、for文は何回も処理をします
+					<br>{}にあるものを解説します
+					<br><br>・<a class="green">str++</a>
+					<br>これは上で定義したstrに値を1ずつ追加していきます
+					<br>++ではなく+5や+10などにすれば1ずつ変えて..ではなく5や10などの大きな数で生成できます
+					<br>・<a class="green">console.log(`test${str}`);//生成する内容</a>
+					<br>これは実際に生成する内容です
+					<br>testは本文になります
+					<br>${str}はtestにつく数値になります
+					<br>testを変えれば別の文字で数値を追加していきます
+					<br><br>といった感じで生成することができます
+					<br>結構簡単ですよね
+					<br>では、次にnode.jsを使って、実行していきたいと思います
+					<br>node.jsで実行するってどういうことなのか、そう気になる人もいると思います
+					<br>キーボートの<a class="orange">Windows key + R</a>を押して、出てきたところに<a class="green">cmd</a>と打ってみてください
+					<br><img src="./image/cmd.png" class="image">
+					<br>そうすると下のような黒いウィンドウが出てくると思います
+					<br><img src="./image/cmd2.png" class="image">
+					<br>これは<a class="orange">コマンドプロンプト</a>と言って、コマンドを使って色々実行していくことができます
+					<br>例えば<a class="green">cd ファイルパス</a>と打つとその階層に移動することができたりします
+					<br>node.jsの入れ方は<a href="https://qiita.com/sefoo0104/items/0653c935ea4a4db9dc2b">こちら</a>を参照してみてください
+					<br>最新バージョンで大丈夫だと思います
+					<br><br>ではかいていきましょう
+					<br>まずはデスクトップでも好きなところにフォルダを作りましょう
+					<br>名前はそうですね、何でもいいですが無難に<a class="orange">script</a>とかにすると分かりやすいかもしれません
+					<br>その中にファイルを作ります。名前は<a class="orange">index.js</a>とでもしましょう
+					<br>注意ですが、拡張子は必ず<a class="orange">js</a>にしてください
+					<br>そしたら好きなエディタやメモ帳で開いて、上のコードをコピペして保存で完了です
+					<br>簡単ですよね。これであとは実行して完了です
+					<br>したらコマンドプロンプトを開いてコマンドを入れましょう
+					<br>まずはcdコマンドで移動しましょう
+					<br>ファイルエクスプローラーのindex.jsがある階層のファイルパスをコピーしてコマンドプロンプトに<a class="orange">cd コピーしたファイルパス</a>と打ってみてください
+					<br>最後に<a class="orange">node index.js</a>と打ったら完了です！これで自動生成の完了です！
+					<br>選択してコピペをすればあとは自由に使えます
+					<br>必要な人には結構便利なコマンドじゃないですか？
+					<br>いちど手を出すともうなしでは生きられなくなってきます
+					<br><br>ちなみにですが、JavaScriptはいろんなことができるので応用すれば下のようなこともできます
+					<br><img src="./image/cmd3.png" class="image">
+					<br>コマンドだけで生成する数を調整したり、複数の違った便利な機能をコマンドで呼び出したり...とまだまだいろんなことができます
+					<br>気になる人はJavaScriptをもっと深く勉強したり、調べたりしてみてください
+					</p>
+					<h2 class="h">終わりに</h2>
+					<p>どうだったでしょうか？
+					<br>個人的にはこのJavaScriptを使って自動化するのはとても便利です
+					<br>「for文を回せば楽にできる」と言ってる人をたまたま見つけて「確かにそうだな」と思った所存です
+					<br>forはほかにも使えるところがあるのでぜひ真似してみてください
+					</p>
+		</div>
+		<!--ふっだ-->
+		<div class="footer">
+				<p>しゃー<br> お問い合わせ
+				</p>
+				<p><a href="https://twitter.com/H2DH4K" target="_blank" class="ri">Twitter</a> ID:H2DH4K<br>
+						<a href="https://discord.gg/tk6bJaG" target="_blank" class="ri">Discord</a> ID:シュー#8493<br>
+						<span class="mini">&copy; 2020〜</span></p>
+		</div>
+</body>
+</html>
